@@ -14,7 +14,9 @@ import {
 import { Produto } from '../entities/produto.entity';
 import { ProdutoService } from '../services/produto.service';
 import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Produto')
 @UseGuards(JwtAuthGuard)
 @Controller('/produtos')
 export class ProdutoController {
